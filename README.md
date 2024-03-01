@@ -1,102 +1,127 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# ToDoApp
 
-Welcome,
+ToDoApp is a to-do-list productivity app where the user enters scheduled activities to make everyday life easier. The app is good for easily structuring and getting a good overview of the day's activities. ToDoApp is useful for the users because they can easily add an activity and remove one.
 
-This is the Code Institute student template for React apps on the Codeanywhere IDE. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.  
-DO NOT use this template if you are using the Gitpod IDE. Use the following command instead:  
-`npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm`
+## Existing features
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **31st August, 2023**
+- __Header__
+- The app has a header just above the text box. The header text asks the user "What's on the schedule today?". The large letters and sharp colors make it easy to see and read the text.
 
-## Codeanywhere Reminders
+![Header](https://github.com/matgus217/To-Do-App/assets/147818054/5418bef3-1cd3-4ad4-a7e3-ba9c32f8a721)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+- Below the header text there is another text "Type your scheduled items here" the user finds out where to enter their activities.
+- The informational text is simple for everyone to understand.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![nformational text](https://github.com/matgus217/To-Do-App/assets/147818054/f6a084f8-a853-4105-a2d1-72f63a88b11e)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
----
+- __Adding a ToDo__
+- The app is built so that there are already two activities entered "Workout" and "Cook food". They are easy to remove, just press the red button. Once the user has done that, he can easily add his own activities.
 
-Happy coding!
+![Adding](https://github.com/matgus217/To-Do-App/assets/147818054/8be6c3fa-a9c2-4c15-b04c-ced46c784239)
 
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- When the user has removed the built-in activities, the app looks like this. Then users can start entering their own activities.
 
-## Available Scripts
+![Adding](https://github.com/matgus217/To-Do-App/assets/147818054/933bce2d-884d-4bf8-b317-3e85042b977a)
 
-In the project directory, you can run:
 
-### `npm install`
+- The user types their activity in the empty text box and then clicks the green button to add the activity.
 
-Installs the required npm packages.
+![Adding](https://github.com/matgus217/To-Do-App/assets/147818054/93729b53-9f64-4239-af50-513a1af58738)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open port 3000 to view it in the browser.
+- If the user wants to delete the activity in the middle, the one at the bottom will be added after the first activity. 
+It also works the same way if the user wants to delete the first or last activity
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Adding](https://github.com/matgus217/To-Do-App/assets/147818054/f14b9aa2-188b-4f57-8217-57d7d47c8d80)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Desing
 
-### `npm run build`
+- __Typography__
+- Arial, Helvetica, sans-serif for the entire app.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- __Colour__
+- I have used colors that match and colors that are easy for the eye to catch.
+- I have worked with Red, Green, White, Purple and Black.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Testing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- I have tested the app on different devices. My sister has also tried it on her mobile device.
+- The app always works.
 
-### `npm run eject`
+### Testing code via terminal and npm test
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- I have tested the app with npm test in the terminal. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- __ToDo.test.js__
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Renders without crashing
+- Renders two default todo items
+- Has an input field
+- Has an add button
+- Adding items - When the add button is pressed, if the input field is empty, prevent item from being added
+- When the add button is pressed, if the input field has text, it creates a new todo item
+- Deleting items - When the delete button is pressed for the first todo item, it removes the entire item
+- Means that because the first toDoItem was deleted, the first toDoItem should now be cook food
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- __ToDoItem.test.js__
 
-## Learn More
+- Renders without crashing
+- Renders the text from the prop
+- Renders a delete button
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Test](https://github.com/matgus217/To-Do-App/assets/147818054/56c4a063-c74b-4b94-b04a-fdae179ae352)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Lighthouse
 
-### Code Splitting
+- I used Lighthouse within the Chrome Developer Tools to test performance, accesibility, best practices and SEO of the website for both desktop and mobile.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- On mobile device:
 
-### Analyzing the Bundle Size
+![Lighthouse](https://github.com/matgus217/To-Do-App/assets/147818054/5a78bce1-985c-4dc1-b987-1959495e446b)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- On desktop device:
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Lighthouse](https://github.com/matgus217/To-Do-App/assets/147818054/073ce7d5-c148-42ab-b701-3f45ee1c17c2)
 
-### Advanced Configuration
+### How does it look on different screen sizes?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Mobile
 
-### Deployment
+![Mobile](https://github.com/matgus217/To-Do-App/assets/147818054/a7e01fd4-06a3-492a-800f-e5323b4935e5)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+#### Tablet
 
-### `npm run build` fails to minify
+![Tablet](https://github.com/matgus217/To-Do-App/assets/147818054/f1cae565-3f7e-4e99-9aea-147a63d42976)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Laptop 
+
+![Laptop](https://github.com/matgus217/To-Do-App/assets/147818054/cc7a3ebc-8c5c-4c60-8d55-d130f63dd8b1)
+
+
+### Bugs
+
+- There are no bugs.
+
+
+## Deployment
+
+### Heroku
+
+- The steps i followed for deployment:
+  I cloned the repository.
+  I created a new app.
+  I linked the Heroku app to the repository.
+  I clicked on deploy.
+
+The live link can be found here - <https://do-todo-app-0a70b062e961.herokuapp.com/>
+
+
+### Content
+
+- I used the teaching materials from [Code Institute](https://codeinstitute.net/se/)
+- I searched the internet and found Create ToDo App using ReactJS for beginners.[GeeksForGeeks](https://www.geeksforgeeks.org/create-todo-app-using-reactjs/)
