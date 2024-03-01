@@ -11,7 +11,7 @@ const ToDo = () => {
   const createNewToDoItem = () => {
     //validate todo
     if (!toDo) {
-      alert("Please enter a todo!");
+      alert("Type your scheduled items");
       return;
     }
     const newId = Math.max(...list.map((t) => t.id)) + 1;
@@ -36,11 +36,11 @@ const ToDo = () => {
 
   return (
     <div className="ToDo">
-      <h1 data-testid="header" className="ToDo-Header">
+      <h1 data-testid="header" className="To-Do-Header">
       What's on the schedule today?
       </h1>
-      <h3 className="ToDo-Subheader">Type your scheduled items here</h3>
-      <div className="ToDo-Container">
+      <h3 className="Subheader">Type your scheduled items here</h3>
+      <div className="Container">
         <div className="ToDo-Content">
           {list.map((item) => {
             return <ToDoItem key={item.id} item={item} deleteItem={deleteItem} />;
@@ -55,7 +55,7 @@ const ToDo = () => {
             onChange={handleInput}
             onKeyPress={handleKeyPress}
           />
-          <button data-testid="add" className="ToDo-Add" onClick={createNewToDoItem}>
+          <button data-testid="add" className="To-Do-Add" onClick={createNewToDoItem}>
             +
           </button>
         </div>

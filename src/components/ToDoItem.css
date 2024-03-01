@@ -1,28 +1,28 @@
-.ToDoItem {
+.To-Do-Item {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ToDoItem-Text {
+.To-Do-Item-Text {
     width: 90%;
     background-color: white;
-    border: 1px solid lightgrey;
-    box-shadow: 1px 1px 1px lightgrey;
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px black;
     padding: 12px;
     margin-right: 10px;
+    border-radius:10px;
 }
 
-.ToDoItem-Delete {
+.To-Do-Item-Delete {
     width: 35px;
     /*padding: 5px;*/
     height: 35px;
     cursor: pointer;
-    background: #ff7373;
+    background: red;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px #c70202;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     margin-right: 5px;
 }
 

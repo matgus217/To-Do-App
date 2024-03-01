@@ -1,8 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-  background: linear-gradient(#dcaeff, #ff6a3d);
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, purple, white);
   height: auto;
   min-height: 100vh;
   display: flex;
@@ -21,29 +21,29 @@ body {
   border: 1px solid white;
   width: 80vw;
   height: auto;
-  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.3);
   background: #fdfdfd;
   padding-bottom: 60px;
   margin: 40px auto;
+  border-radius: 10px;
 }
 
-.ToDo-Header {
+.To-Do-Header {
   color: black;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   margin: 70px auto 0px;
 }
 
-.ToDo-Subheader {
+.Subheader {
   font-size: 1em;
   color: black;
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
   margin: 4px auto 20px;
 }
 
-.ToDo-Add {
+.To-Do-Add {
   color: white;
   font-size: 2em;
   width: 40px;
@@ -53,18 +53,17 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: #73ff73;
+  background: green;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px #47a947;
   margin: 20px auto 0;
 }
 
-.ToDo-Add:hover {
+.To-Do-Add:hover {
   box-shadow: none;
   margin-left: calc(auto + 1px);
 }
 
-.ToDo-Container {
+.Container {
   width: 80%;
   margin: 0 auto;
 }
@@ -74,5 +73,7 @@ input {
   padding: 10px;
   font-size: 1em;
   margin: 10px auto;
-  box-shadow: 1px 3px 20px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 3px 20px 0px black(0, 0, 0, 0.3);
+  margin-right: 25px;
+  border-radius: 10px;
 }
