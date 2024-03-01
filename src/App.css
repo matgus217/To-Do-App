@@ -60,7 +60,7 @@ body {
 
 .To-Do-Add:hover {
   box-shadow: none;
-  margin-left: calc(auto + 1px);
+  
 }
 
 .Container {
